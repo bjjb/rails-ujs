@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rails UJS /tests</title>
+    <script src='rails.js'></script>
+    <style>
+      ul {
+        display: inline-block; width: 22em; list-style: none; padding: 0;
+      }
+    </style>
+    <meta name='csrf-param' content='authenticity_token' />
+    <meta name='csrf-token' content='1234567890' />
+  </head>
+  <body>
+    <h1>rails-ujs Tests</h1>
+    <h2>Links</h2>
+    <ul>
+      <li><a href='/test' data-method='get'>GET</a></li>
+      <li><a href='/test' data-method='post'>POST</a></li>
+      <li><a href='/test' data-method='put'>PUT</a></li>
+      <li><a href='/test' data-method='delete'>DELETE</a></li>
+    </ul>
+    <ul>
+      <li><a href='/test' data-confirm='OK?' data-method='get'>GET with confirmation</a></li>
+      <li><a href='/test' data-confirm='OK?' data-method='post'>POST with confirmation</a></li>
+      <li><a href='/test' data-confirm='OK?' data-method='put'>PUT with confirmation</a></li>
+      <li><a href='/test' data-confirm='OK?' data-method='delete'>DELETE with confirmation</a></li>
+    </ul>
+    <ul>
+      <li><a href='/test' data-remote='true' data-method='get'>AJAX GET</a></li>
+      <li><a href='/test' data-remote='true' data-method='post'>AJAX POST</a></li>
+      <li><a href='/test' data-remote='true' data-method='put'>AJAX PUT</a></li>
+      <li><a href='/test' data-remote='true' data-method='delete'>AJAX DELETE</a></li>
+    </ul>
+    <ul>
+      <li><a href='/test' data-confirm='OK?' data-remote='true' data-method='get'>AJAX GET with confirmation</a></li>
+      <li><a href='/test' data-confirm='OK?' data-remote='true' data-method='post'>AJAX POST with confirmation</a></li>
+      <li><a href='/test' data-confirm='OK?' data-remote='true' data-method='put'>AJAX PUT with confirmation</a></li>
+      <li><a href='/test' data-confirm='OK?' data-remote='true' data-method='delete'>AJAX DELETE with confirmation</a></li>
+    </ul>
+
+    <h2>Forms</h2>
+    <ul>
+      <li><form method='post' action='/test' data-method='get'><input type='submit' name='submit' value='GET' /></form></li>
+      <li><form method='post' action='/test' data-method='post'><input type='submit' name='submit' value='POST' /></form></li>
+      <li><form method='post' action='/test' data-method='put'><input type='submit' name='submit' value='PUT' /></form></li>
+      <li><form method='post' action='/test' data-method='delete'><input type='submit' name='submit' value='DELETE' /></form></li>
+    </ul>
+    <ul>
+      <li><form method='post' action='/test' data-confirm='OK?' data-method='get'><input type='submit' name='submit' value='GET with confirmation' /></form></li>
+      <li><form method='post' action='/test' data-confirm='OK?' data-method='post'><input type='submit' name='submit' value='POST with confirmation' /></form></li>
+      <li><form method='post' action='/test' data-confirm='OK?' data-method='put'><input type='submit' name='submit' value='PUT with confirmation' /></form></li>
+      <li><form method='post' action='/test' data-confirm='OK?' data-method='delete'><input type='submit' name='submit' value='DELETE with confirmation' /></form></li>
+    </ul>
+
+    <ul>
+      <li><form method='post' action='/test' data-remote='true' data-method='get'><input type='submit' name='submit' value='AJAX GET' /></form></li>
+      <li><form method='post' action='/test' data-remote='true' data-method='post'><input type='submit' name='submit' value='AJAX POST' /></form></li>
+      <li><form method='post' action='/test' data-remote='true' data-method='put'><input type='submit' name='submit' value='AJAX PUT' /></form></li>
+      <li><form method='post' action='/test' data-remote='true' data-method='delete'><input type='submit' name='submit' value='AJAX DELETE' /></form></li>
+    </ul>
+    <ul>
+      <li><form method='post' action='/test' data-confirm='OK?' data-remote='true' data-method='get'><input type='submit' name='submit' value='AJAX GET with confirmation' /></form></li>
+      <li><form method='post' action='/test' data-confirm='OK?' data-remote='true' data-method='post'><input type='submit' name='submit' value='AJAX POST with confirmation' /></form></li>
+      <li><form method='post' action='/test' data-confirm='OK?' data-remote='true' data-method='put'><input type='submit' name='submit' value='AJAX PUT with confirmation' /></form></li>
+      <li><form method='post' action='/test' data-confirm='OK?' data-remote='true' data-method='delete'><input type='submit' name='submit' value='AJAX DELETE with confirmation' /></form></li>
+    </ul>
+  </body>
+</html>
