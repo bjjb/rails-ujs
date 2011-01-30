@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["JJ Buckley"]
   s.email       = ["jj@bjjb.org"]
-  s.homepage    = "http://jjbuckley.guthub.com/rails-ujs"
+  s.homepage    = "http://jjbuckley.github.com/rails-ujs"
   s.summary     = %q{A framework-agnostic Rails Unobtrusive JavaScript backend}
   s.description = %q{rails-ujs is an unobtrusive Javascript library for Rails
     projects which don't include any extra Javascript framework
