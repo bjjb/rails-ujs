@@ -1,0 +1,2 @@
+module RailsUjs
+end
