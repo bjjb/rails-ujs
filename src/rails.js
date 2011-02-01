@@ -20,18 +20,18 @@ new function(e) {
     }
 
     if (e.type === 'readystatechange') {
-      console.log("Ready state change: %o", target);
       if (target.readyState === 4) {
         var responseType = target.getResponseHeader('Content-Type');
         if (responseType && responseType.indexOf('javascript')) {
-          eval(target.responseText);
+          new function() { eval(target.responseText); }();
         }
       }
       return true;
     }
 
     var tagName = target.tagName;
-    if (tagName === 'A' || tagName === 'FORM') {
+    if ((e.type === 'click' && tagName === 'A') ||
+        (e.type === 'submit' && tagName === 'FORM')) {
       if (target.hasAttribute('data-confirm')) {
         if (!confirm(target.getAttribute('data-confirm'))) {
           e.preventDefault();
@@ -41,6 +41,7 @@ new function(e) {
 
       var form;
       if (target.hasAttribute('data-method') || target.hasAttribute('data-remote')) {
+        e.preventDefault();
         // A form will be required...
         if (tagName === 'FORM') {
           form = target;
@@ -97,7 +98,7 @@ new function(e) {
 
       if (target.hasAttribute('data-remote')) {
         var xhr = new XMLHttpRequest();
-        xhr.open('post', url, true);
+        xhr.open(method, url, true);
         xhr.setRequestHeader('Content-Type', 'x-www-form-urlencoded');
         xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
         xhr.setRequestHeader('Accept', 'text/javascript');
@@ -108,8 +109,11 @@ new function(e) {
             data.push(form.children[i].name + '=' + form.children[i].value);
           }
         }
-        xhr.send(encodeURI(data.join('&')));
-        e.preventDefault();
+        data = encodeURI(data.join('&'));
+        xhr.send(data);
+      }
+      else if (target.hasAttribute('data-method')) {
+        form.submit();
       }
     }
   };
