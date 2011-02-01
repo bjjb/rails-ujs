@@ -28,9 +28,9 @@ rails-ujs is targeted mainly at modern browsers, such as Firefox, Chrome,
 Safari and Webkit-based mobile browsers. It will need more work to operate on
 non-W3-compliant browsers (like Internet Explorer) - if you need to support
 every platform, you'd be better off with one of the existing UJS packages,
-like the one that ships with Rails (using [Prototype][protype]) or
-[jquery-ujs][jquery].
+like [prototype-ujs][prototype-ujs] (which ships with Rails) or
+[jquery-ujs][jquery-ujs].
 
 [rails]: http://rubyonrails.org
-[prototype]: http://prototypejs.org
-[jquery]: http://jquery.com
+[prototype-ujs]: https://github.com/rails/prototype-ujs
+[jquery-ujs]: https://github.com/rails/jquery-ujs
