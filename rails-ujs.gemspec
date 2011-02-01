@@ -15,8 +15,6 @@ Gem::Specification.new do |s|
     libraries. It's potentially useful for mobile webapps, or other projects
     which target only browsers with modern Javascript support.}
 
-  s.rubyforge_project = "rails-ujs"
-
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
